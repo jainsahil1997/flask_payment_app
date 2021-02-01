@@ -28,3 +28,7 @@ Power Shell testing
 
 $ $response = Invoke-RestMethod 'http://127.0.0.1:5000/api/v1.0/transactions?ccnumber=123456781234&ccname=Sahil Jain&expiration=202102&amount=900.00&securitycode=212' -Method 'POST' -Headers $headers
 $ $response | ConvertTo-Json
+
+Pytest
+
+ $ python -m pytest --cov=./

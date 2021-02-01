@@ -47,7 +47,7 @@ def routetoexpensive(details):
 
 def routetopremium(details):
     t=0
-    while ( t<3 ) :
+    while ( t<3 ) :s
         try :
             res = requests.post(cheapgatewayapi,details)
             logging.info ("processed with premium gateway")

@@ -32,14 +32,14 @@ def test_proper():
     response = app.test_client().post(
         '/api/v1.0/transactions?ccnumber=123456781234&ccname=SahilJain&expiration=202101&amount=29&securitycode=212')
 
-    assert response.status_code == 500
+    assert response.status_code == 400
 
     response = app.test_client().post(
         '/api/v1.0/transactions?ccnumber=123456781234&ccname=SahilJain&expiration=202101&amount=1&securitycode=212')
 
-    assert response.status_code == 500
+    assert response.status_code == 400
 
     response = app.test_client().post(
         '/api/v1.0/transactions?ccnumber=123456781234&ccname=SahilJain&expiration=202101&amount=600&securitycode=212')
 
-    assert response.status_code == 500
+    assert response.status_code == 400
